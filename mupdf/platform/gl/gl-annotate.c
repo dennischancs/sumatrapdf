@@ -540,46 +540,49 @@ static void new_annot(int type)
 	}
 }
 
+// modify, color from Microsoft Edge PDF reader
 static const char *color_names[] = {
 	"None",
-	"Aqua",
-	"Black",
-	"Blue",
-	"Fuchsia",
-	"Gray",
-	"Green",
-	"Lime",
-	"Maroon",
-	"Navy",
-	"Olive",
-	"Orange",
-	"Purple",
-	"Red",
-	"Silver",
-	"Teal",
-	"White",
-	"Yellow",
+	"黄",
+	"浅绿",
+	"浅蓝",
+	"粉",
+	"红",
+	"橙",
+	"绿",
+	"墨绿",
+	"橄榄绿",
+	"蓝",
+	"海军蓝",
+	"紫",
+	"紫红",
+	"洋红",
+	"白",
+	"银",
+	"灰",
+	"黑",
 };
 
 static unsigned int color_values[] = {
 	0x00000000, /* transparent */
-	0xff00ffff, /* aqua */
-	0xff000000, /* black */
-	0xff0000ff, /* blue */
-	0xffff00ff, /* fuchsia */
-	0xff808080, /* gray */
-	0xff008000, /* green */
-	0xff00ff00, /* lime */
-	0xff800000, /* maroon */
-	0xff000080, /* navy */
-	0xff808000, /* olive */
-	0xffffa500, /* orange */
-	0xff800080, /* purple */
-	0xffff0000, /* red */
-	0xffc0c0c0, /* silver */
-	0xff008080, /* teal */
-	0xffffffff, /* white */
-	0xffffff00, /* yellow */
+	0xfffff066, /* 黄 */
+	0xff7df066, /* 浅绿 */
+	0xff8fdef9, /* 浅蓝 */
+	0xfff799d1, /* 粉 */
+	0xffeb4949, /* 红 */
+	0xffffaa00, /* 橙 */
+	0xff22b14c, /* 绿 */
+	0xff008080, /* 墨绿 */
+	0xff808000, /* 橄榄绿 */
+	0xff004de6, /* 蓝 */
+	0xff000080, /* 海军蓝 */
+	0xffbcb3ff, /* 紫 */
+	0xffff00ff, /* 紫红 */
+	0xffb31564, /* 洋红（深的粉红色） */
+	0xffffffff, /* 白 */
+	0xffc0c0c0, /* 银 */
+	0xff808285, /* 灰 */
+	0xff000000, /* 黑 */
 };
 
 static unsigned int hex_from_color(int n, float color[4])
