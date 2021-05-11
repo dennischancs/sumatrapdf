@@ -56,41 +56,47 @@ static const char *gSoundIcons = "Speaker\0Mic\0";
 static const char* gTextIcons = "Comment\0Help\0Insert\0Key\0NewParagraph\0Note\0Paragraph\0";
 static const char *gStampIcons = "Approved\0AsIs\0Confidential\0Departmental\0Draft\0Experimental\0Expired\0Final\0ForComment\0ForPublicRelease\0NotApproved\0NotForPublicRelease\0Sold\0TopSecret\0";
 static const char *gLineEndingStyles = "None\0Square\0Circle\0Diamond\0OpenArrow\0ClosedArrow\0Butt\0ROpenArrow\0RClosedArrow\0Slash\0";
-static const char* gColors = "None\0Aqua\0Black\0Blue\0Fuchsia\0Gray\0Green\0Lime\0Maroon\0Navy\0Olive\0Orange\0Purple\0Red\0Silver\0Teal\0White\0Yellow\0";
+static const char* gColors = "None\0黄\0浅绿\0浅蓝\0粉\0红\0橙\0绿\0墨绿\0橄榄绿\0蓝\0海军蓝\0紫\0紫红\0洋红\0白\0银\0灰\0黑\0";
 static const char *gFontNames = "Cour\0Helv\0TiRo\0";
 static const char *gFontReadableNames = "Courier\0Helvetica\0TimesRoman\0";
 static const char* gQuaddingNames = "Left\0Center\0Right\0";
 
+// modify, color from Microsoft Edge PDF reader
+// 注意：0xff表示不透明，后6位数与gl-annotate.c中正好逆序，如 ff|f0|66 --改为--> 66|f0|ff
 static COLORREF gColorsValues[] = {
-    //0x00000000, /* transparent */
     ColorUnset, /* transparent */
-    //0xff00ffff, /* aqua */
-    0xffffff00, /* aqua */
-    0xff000000, /* black */
-    //0xff0000ff, /* blue */
-    0xffff0000, /* blue */
-    //0xffff00ff, /* fuchsia */
-    0xffff00ff, /* fuchsia */
-    0xff808080, /* gray */
-    0xff008000, /* green */
-    0xff00ff00, /* lime */
-    //0xff800000, /* maroon */
-    0xff000080, /* maroon */
-    //0xff000080, /* navy */
-    0xff800000, /* navy */
-    //0xff808000, /* olive */
-    0xff008080, /* olive */
-    //0xffffa500, /* orange */
-    0xff00a5ff, /* orange */
-    0xff800080, /* purple */
-    //0xffff0000, /* red */
-    0xff0000ff, /* red */
-    0xffc0c0c0, /* silver */
-    //0xff008080, /* teal */
-    0xff808000, /* teal */
-    0xffffffff, /* white */
-    //0xffffff00, /* yellow */
-    0xff00ffff, /* yellow */
+	//0xfffff066, /* 黄 */
+	0xff66f0ff, /* 黄 */
+	//0xff7df066, /* 浅绿 */
+	0xff66f07d, /* 浅绿 */
+	//0xff8fdef9, /* 浅蓝 */
+	0xfff9de8f, /* 浅蓝 */
+	//0xfff799d1, /* 粉 */
+	0xffd199f7, /* 粉 */
+	//0xffeb4949, /* 红 */
+	0xff4949eb, /* 红 */
+	//0xffffaa00, /* 橙 */
+	0xff00aaff, /* 橙 */
+	//0xff22b14c, /* 绿 */
+	0xff4cb122, /* 绿 */
+	//0xff008080, /* 墨绿 */
+	0xff808000, /* 墨绿 */
+	//0xff808000, /* 橄榄绿 */
+	0xff008080, /* 橄榄绿 */
+	//0xff004de6, /* 蓝 */
+	0xffe64d00, /* 蓝 */
+	//0xff000080, /* 海军蓝 */
+	0xff800000, /* 海军蓝 */
+	//0xffbcb3ff, /* 紫 */
+	0xffffb3bc, /* 紫 */
+	0xffff00ff, /* 紫红 */
+	//0xffb31564, /* 洋红（深的粉红色） */
+	0xff6415b3, /* 洋红（深的粉红色） */
+	0xffffffff, /* 白 */
+	0xffc0c0c0, /* 银 */
+	//0xff808285, /* 灰 */
+	0xff858280, /* 灰 */
+	0xff000000, /* 黑 */
 };
 
 AnnotationType gAnnotsWithBorder[] = {
